@@ -114,9 +114,8 @@ pub mod utf8 {
         /// The type of parser to run for each element.
         parser: ParserType,
 
-        /* Phantoms */
-        _phantom1: PhantomData<OutputType>,
-        _phantom2: PhantomData<ErrorType>,
+        /* Phantom */
+        _phantom: PhantomData<(OutputType, ErrorType)>,
     }
 
     impl<OutputType, ErrorType, ParserType: Parser<OutputType, ErrorType>>
@@ -128,8 +127,7 @@ pub mod utf8 {
                 min,
                 max,
                 parser,
-                _phantom1: PhantomData,
-                _phantom2: PhantomData,
+                _phantom: PhantomData,
             }
         }
     }
