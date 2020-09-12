@@ -1,0 +1,7 @@
+[package]
+name = "parselib_rs"
+version = "0.1.0"
+authors = ["CJ Burkey <cjburkey01@gmail.com>"]
+edition = "2018"
+
+[dependencies]
